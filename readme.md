@@ -13,7 +13,7 @@ Using a django rest api to build a full crud backend application where the user 
 - 
 
 ### Models
-
+![image](./../project%204%20model-2023-02-20%20at%203.22.58%20PM.png)
 
 ### Backend Route Table
 
