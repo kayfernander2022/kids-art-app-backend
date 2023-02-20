@@ -4,4 +4,4 @@ set -o errexit
 
 pip install -r dependencies.txt
 
-python manage.py miigrate
+python manage.py migrate

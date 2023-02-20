@@ -10,13 +10,13 @@ Using a django rest api to build a full crud backend application where the user 
 - python
 - django
 - 
-[label](kidsartapp/settings.py)- 
 - 
 
 ### Models
 
 
 ### Backend Route Table
+
 | Name    | URL    | HTTP Verb |Description|
 | :---    | :----: | :----:    |      :----   |
 | Index   | /art    | GET      | Display a list of art|
@@ -27,8 +27,6 @@ Using a django rest api to build a full crud backend application where the user 
 
 
 ### User Stories
-
-
 
 - As a user, I can see a list of all pieces of art when I visit the page
 - As a user, I can see detailed information about a specific art entry
