@@ -2,7 +2,7 @@
 
 Using a django rest api to build a full crud backend application where the user can store an image and description of their childs artwork to display to friends and family.
 
-### [Link to Deployed Backend]()
+### [Link to Deployed Backend](https://kids-art-app-backend.onrender.com)
 
 ### Technologies Used
 
@@ -10,7 +10,7 @@ Using a django rest api to build a full crud backend application where the user 
 - python
 - django
 - 
-- 
+[label](kidsartapp/settings.py)- 
 - 
 
 ### Models
