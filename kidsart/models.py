@@ -6,5 +6,5 @@ def upload_to(instance, filename):
 # Create your models here.
 class ArtPiece(models.Model):
     title = models.CharField(max_length=50, blank=False)
-    image_url = models.ImageField(upload_to=upload_to)
+    image_url = models.ImageField()
     description = models.TextField(max_length=100)
