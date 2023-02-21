@@ -20,11 +20,11 @@ from kidsart.views import ArtPieceViewSet
 
 # create a new router
 router = routers.DefaultRouter()
-# register our viewsets
-router.register('kidsart', ArtPieceViewSet) #register "/todos" routes #r makes it a raw string //this is creating an array of paths
+# register our viewsets with the router
+router.register(r'kidsart', ArtPieceViewSet) #register "/todos" routes #r makes it a raw string //this is creating an array of paths
 
 urlpatterns = [
      # add all of our router urls
-    path('', include(router.urls)),
+    path('', include(router.urls)),#any url, got to router
     path('admin/', admin.site.urls),
 ]

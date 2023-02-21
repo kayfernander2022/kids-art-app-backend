@@ -1,7 +1,7 @@
 from .models import ArtPiece
 from rest_framework import serializers
 
-# Our TodoSerializer
+# Our ArtPieceSerializer
 class ArtPieceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         # The model it will serialize
