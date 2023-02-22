@@ -14,10 +14,9 @@ from pathlib import Path
 import dj_database_url
 import os
 
-# Actual directory user files go to
-#MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'mediafiles')
-# URL used to access the media
-#MEDIA_URL = '/media/'
+
+
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -34,11 +33,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY", default="key")
 DEBUG = 'RENDER' not in os.environ #True in delvelopment / false in deployment
 
 ALLOWED_HOSTS = []
-RENDER_EXTERNAL_HOSTNAME = os.environ.get
-('RENDER_EXTERNAL_HOSTNAME')
+#RENDER_EXTERNAL_HOSTNAME = os.environ.get
+#('RENDER_EXTERNAL_HOSTNAME')
 
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+#if RENDER_EXTERNAL_HOSTNAME:
+#    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition
@@ -52,7 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'kidsart.apps.KidsartConfig',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -133,7 +132,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+# Actual directory user files go to
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = 'media/'
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),) #creates path to static file if needed(**comment out if getting error)
+
+
+# URL used to access the media
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
