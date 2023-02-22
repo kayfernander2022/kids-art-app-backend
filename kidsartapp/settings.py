@@ -135,7 +135,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # Actual directory user files go to
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_ROOT = 'media/'
+MEDIA_ROOT = '/media/'#
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),) #creates path to static file if needed(**comment out if getting error)
 
 
