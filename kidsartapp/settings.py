@@ -32,12 +32,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY", default="key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ #True in delvelopment / false in deployment
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'kids-art-app-backend.onrender']
-#RENDER_EXTERNAL_HOSTNAME = os.environ.get
-#('RENDER_EXTERNAL_HOSTNAME')
+ALLOWED_HOSTS = []
 
-#if RENDER_EXTERNAL_HOSTNAME:
- #   ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition
