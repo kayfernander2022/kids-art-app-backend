@@ -15,4 +15,4 @@ urlpatterns = [
      # add all of our router urls
     path('', include(router.urls)),#any url, got to router
     path('admin/', admin.site.urls),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)#allow uploaded image to create a url
+]+ static(settings.STATIC_ROOT)#allow uploaded image to create a url

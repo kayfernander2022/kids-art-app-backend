@@ -144,13 +144,13 @@ if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Actual directory user files go to
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_ROOT = 'media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = 'media/'
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),) #creates path to static file if needed(**comment out if getting error)
 
 
 # URL used to access the media
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
