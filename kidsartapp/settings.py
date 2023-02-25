@@ -43,6 +43,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -134,17 +135,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'staticfiles/'
-MEDIA_ROOT = 'staticfiles/media/'
+STATIC_URL = '/static/'
 
-MEDIA_URL = os.path.join(BASE_DIR, MEDIA_ROOT)
+MEDIA_URL = '/media/'
 
-STATICFILES_DIR = (os.path.join(BASE_DIR, STATIC_URL),)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles/media')
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_DIR = (os.path.join(BASE_DIR, 'static'),) 
 
 # Following settings only make sense on production and may break development environments.
 if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
     # in your application directory on Render.
-    STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Turn on WhiteNoise storage backend that takes care of compressing static files
     # and creating unique names for each version so they can safely be cached forever.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

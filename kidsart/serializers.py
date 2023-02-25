@@ -7,7 +7,7 @@ class ArtPieceSerializer(serializers.HyperlinkedModelSerializer):
         # The model it will serialize
         model = ArtPiece
         # choose the fields that should be included in the serialized output we get back,which ones you want
-        fields = ['id', 'title', 'description', 'imageData']
+        fields = ['id', 'title', 'description', 'image_url']
 
 
 #the seralizers job is to give us pretty objects
