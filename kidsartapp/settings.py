@@ -89,7 +89,8 @@ WSGI_APPLICATION = 'kidsartapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+# for local development make sure to run following command in each terminal window 
+# export DATABASE_URL={yourdatabaseUrl}
 DATABASES = {
     'default': dj_database_url.config(
         conn_max_age=600,
