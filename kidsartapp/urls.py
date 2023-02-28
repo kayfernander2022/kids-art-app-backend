@@ -17,3 +17,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/imagekit-auth', ImagekitAuth.as_view())
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)#allow uploaded image to create a url
+
+

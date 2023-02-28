@@ -10,7 +10,6 @@ from django.test import TestCase
 from kidsartapp.settings import IMAGEKIT_KEY
 
 # Create your views here.
-#we dont have to define all the routes like we previously did we just need this viewset. it will create all the index, update, show,delete routes
 
 class ArtPieceViewSet(viewsets.ModelViewSet):
     ## The Main Query for the index route
@@ -22,13 +21,13 @@ class ArtPieceViewSet(viewsets.ModelViewSet):
     
 class imagekitAuthTest():
     
-    def __init__(self,token,expire,signature,created=None):
+    def __init__(self,token,expire,signature,created=None): 
 
         self.token = token
         self.expire = expire
         self.signature = signature
    
-class ImagekitAuth(APIView):
+class ImagekitAuth(APIView): 
     def get(self, request):
         imagekit = ImageKit(
             private_key=IMAGEKIT_KEY,
@@ -46,4 +45,5 @@ class ImagekitAuth(APIView):
         
         return Response(serializer_class.data)   
     
-#now do the router in urls.py
+
+#handling the users request to auth against imagekit by giving a authentication token.
